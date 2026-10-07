@@ -1,0 +1,158 @@
+@charset "UTF-8";
+/* CSS Document */
+@media screen and (max-width: 450px) {
+  .help_topbar {
+    margin: 0px 8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+	/*.reservations_row h3{
+		font-size: 1.5em;
+		float: left !important;
+	}
+	.navbar-toggle{
+		margin-top: -40px;
+	}*/
+}
+
+@media screen and (max-width: 650px) {
+	.reservation_menu{
+		width:100%;
+		margin-top:10px;
+	}
+	.reservations_row h3{
+		font-size: 1.5em;
+		float: left !important;
+	}
+	.navbar-toggle{  margin-top: -40px;}
+}
+@media screen and (min-width: 600px) and (max-width: 991px) {
+	ul.passengers li{
+		display:inline;
+	}
+}
+
+@media screen and (min-width: 651px) and (max-width: 660px) {
+	.reservation_menu{
+		margin-top:-72px;
+	}
+}
+@media screen and (min-width: 660px) and (max-width: 767px) {
+	.reservation_menu{
+		margin-top:-72px;
+	}
+}
+@media screen and (max-width: 767px) {
+	.reservation_menu{
+		width:100%;
+		padding-right: 15px;
+  		padding-left: 15px;
+	}
+	.title_step {
+  	padding: 10px 10px 30px 10px;
+	}
+	.header_process ul.trip_cost_date li{
+		display:block;
+		width:100%;
+		margin:2px 0px;
+	}
+	.header_process ul.trip_cost_date li.trip{
+		width:100%;
+	}
+	.header_process ul.trip_cost_date li.cost{
+		width:100%;
+	}
+	.header_process ul.trip_cost_date li.date{
+		width:100%;
+		text-align:left;
+	}
+
+	.seats{
+		display: block;
+	}
+
+	.seats .info_seats p{
+		text-align: left;
+	}
+
+}
+@media screen and (max-width: 991px) {
+	.address {
+		width: 96%;
+		margin-right: 20px;
+	}
+	.city {
+  	width: 45%;
+  	margin-right: 20px;
+		margin-top:10px;
+	}
+	.postal {
+		width: 44%;
+		margin-top:10px;
+	}
+	.country {
+		width: 45%;
+		margin-right: 20px;
+	}
+	.phone {
+		width: 41.5%;
+		margin-right: 20px;
+	}
+	.mail {
+		margin-top:10px;
+		width: 96%;
+	}
+	.names{
+		width:96%;
+		margin-right: 20px;
+	}
+	.terms {
+		width: 96%;
+		margin-right: 20px;
+		margin-top: 15px;
+	}
+	.terms p{
+		text-align:left;
+	}
+}
+
+
+@media screen and (max-width: 992px) {
+	.carousel_main{
+		margin-top: 20px;
+	}
+	.header_section{
+		margin-top: 20px;
+	}
+	.clock{
+		width: 100%;
+		margin-top:20px;
+	}
+	.message_clock small{
+		text-align: left;
+	}
+	.cont_message_clock{
+		padding: 20px 15px 20px 25px;
+	}
+	.message_sale{
+		width:100%;
+	}
+}
+
+
+@media (min-width: 992px){
+	.logo{
+		margin: -5px 0px 0px 36px;
+	}
+	
+}
+
+@media (min-width: 1200px){
+	.container {
+  		width: 960px;
+	}
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+}

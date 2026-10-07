@@ -1,0 +1,92 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="es-mx">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<link rel="stylesheet" type="text/css" href="../nueva/Default.css" />
+
+
+<title>Operacion</title>
+<script language="javascript"> 
+function printWindow() {
+//document.Operacion.I1.src="NullPasajero.bmp"
+bV = parseInt(navigator.appVersion);
+if (bV >= 4) window.print();
+//document.Operacion.I1.src='Imprimir.jpg'
+}
+
+
+function VentaNueva() {
+	 	window.history.go(-1)
+}
+
+var newwindow = '';
+
+function Imprime(url) {
+		newwindow=window.open(url,'name','height=200,width=150');
+}
+
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+</script>
+</head>
+
+<body class="tableHeader">
+
+<script language="javascript">  
+
+
+var V_CadenaError = <!$MG_CadenaError> 
+
+var cadTabla ="<TABLE border=0 bordercolor='white' cellspacing=0 cellpadding=0 width='100%' class='tablas'>"
+        cadTabla += "<tr><td align='center' border=0 ><img src='/MEN/logo.jpg' ></td></tr> "
+
+        cadTabla += "<tr class='fondo1'><td align='left'> <font size='5'>ERROR:</font></p></td></tr>"
+        cadTabla += "<tr class='fondo2'><td align='left'><font size='3'>"+V_CadenaError+"</font></td></tr>"
+		cadTabla += "<tr class='fondo1'><td align='left'><font size=2><a href=# onClick='return VentaNueva();'>REGRESAR</a></font></td></tr>"
+
+cadTabla += "</table>";
+document.write(cadTabla) 
+
+var dato="prueba";
+
+</script>
+
+<script language="JavaScript">
+<!--
+/*function bderecho(e) {
+if (navigator.appName == 'Netscape' && (e.which == 3 || e.which == 2))
+return false;
+else if (navigator.appName == 'Microsoft Internet Explorer' && (event.button == 2 || event.button == 3)) {
+alert(" El boton derecho esta desahabilitado ");
+return false;
+}
+return true;
+}
+if (document.layers) window.captureEvents(Event.MOUSEDOWN);
+window.onmousedown=bderecho;
+document.onmousedown=bderecho;
+
+//-->*/
+</script> 
+</body>
+
+</html>

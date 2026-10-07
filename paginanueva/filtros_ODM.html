@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)file://localhost/Users/gatty/Desktop/Sales/sales_odm.html -->
+<html lang="en">
+	<head>
+		<script src="../JS/jquery-1.9.1.min.js"></script>
+		<script src="../imagenes/genera.js" type="text/javascript"></script>
+		<script src="../JS/validaciones.js" type="text/javascript"></script>
+		<script src="../JS/chosen.jquery.js" type="text/javascript"></script>
+		<script src="../JS/bootstrap-datepicker.js" type="text/javascript"></script>
+		<script src="../JS/filtros.js" type="text/javascript"></script>
+		<script src="../js/idiomaES.js" type="text/javascript"></script>
+		<script src="../js/idiomaIN.js" type="text/javascript"></script>
+		<script src="../js/idioma.js" type="text/javascript"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="UTF-8">
+		<title>VENTA ODM</title>
+		<link rel="stylesheet" href="../imagenes/bootstrap.css">
+		<link rel="stylesheet" href="../imagenes/bootstrap-responsive.css">
+		<link rel="stylesheet" href="../imagenes/filtros.css">
+		
+		<script type="text/javascript">
+		var idioma='<!$MG_idioma>';
+		if(idioma=='')
+		idioma='ES'
+	    setIdioma(idioma);
+		</script>
+	
+		
+	</head>
+	<div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div>
+	
+	<body onLoad="cargaOrigenesMOCKUP()">
+					<form class="tickets" style="width: 374px;height: 290px;" name="form" id="form" action="<!$MG_url>/uniScripts/mgrqispi.dll" method="POST"  target="_top" >
+						<input type="hidden" name="APPNAME" value=<!$MG_AppName>>
+						<input type="hidden" name="PRGNAME" value="AccesoEx" />
+						<input type="hidden" name="IDIOMA" value=<!$MG_idioma>>
+						<input type="hidden" name="ARGUMENTS" value="modo,modo1,Origen,Destino,Fechabox0,Fechabox,Adulto,Insen,Nino,Estudiante,Maestro,tipoViaje,'','',0,IDIOMA" />
+						<input type="hidden" name="modo" value="MA" />
+						<input type="hidden" name="modo1" value="" />
+
+						<div class="travel">
+							<label>Viaje sencillo</label>
+							<input id="tipoViaje_0" onclick="valida_viaje()" name="tipoViaje" type="radio" value="V1" checked="checked">
+
+							<label>Viaje redondo</label>
+							<input id="tipoViaje_1" onclick="valida_viaje()" name="tipoViaje" type="radio" value="V2">
+						</div>
+						<span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+						<div id="tdOrigen" name="tdOrigen"><select name="Origen" id="Origen" style="width:200px" data-placeholder="Cargando.."></select></div>
+						<div id="tdDestino" name="tdDestino"><select name="Destino" id="Destino" style="width:200px;" data-placeholder="¿A dónde vas?"></select></div>
+						<br>
+						<div class="dataPicker">
+							<input id="dpd1" name="Fechabox0" placeholder="Fecha de Salida" class="calendario" >
+							<input id="dpd2" name="Fechabox" placeholder="Fecha de Regreso" class="calendario" style="display: none;">
+						</div>
+
+						<br>
+
+						<div class="traveller">
+							<h1 class="user">Tipo de pasajero ⇓ </h1>
+
+							<label>Adulto</label>
+							<select name="Adulto" id="Adulto" class="numero">
+								<option> 0 </option>
+								<option selected=""> 1 </option>
+								<option> 2 </option>
+								<option> 3 </option>
+								<option> 4 </option>
+								<option> 5 </option>
+								<option> 6 </option>
+								<option> 7 </option>
+								<option> 8 </option>
+								<option> 9 </option>
+								<option> 10 </option>
+							</select>
+
+							<label>Estudiante</label>
+							<select name="Estudiante" id="Estudiante" class="numero">
+								<option> 0 </option>
+								<option> 1 </option>
+								<option> 2 </option>
+								<option> 3 </option>
+								<option> 4 </option>
+								<option> 5 </option>
+								<option> 6 </option>
+								<option> 7 </option>
+								<option> 8 </option>
+								<option> 9 </option>
+								<option> 10 </option>
+							</select>
+
+							<label>Menor</label>
+							<select name="Nino" id="Nino" class="numero">
+								<option> 0 </option>
+								<option> 1 </option>
+								<option> 2 </option>
+								<option> 3 </option>
+								<option> 4 </option>
+								<option> 5 </option>
+								<option> 6 </option>
+								<option> 7 </option>
+								<option> 8 </option>
+								<option> 9 </option>
+								<option> 10 </option>
+							</select>
+
+							<label>Profesor</label>
+							<select name="Maestro" id="Maestro" class="numero">
+								<option> 0 </option>
+								<option> 1 </option>
+								<option> 2 </option>
+								<option> 3 </option>
+								<option> 4 </option>
+								<option> 5 </option>
+								<option> 6 </option>
+								<option> 7 </option>
+								<option> 8 </option>
+								<option> 9 </option>
+								<option> 10 </option>
+							</select>
+
+							<label>Senectud</label>
+							<select name="Insen" id="Insen" class="numero">
+								<option> 0 </option>
+								<option> 1 </option>
+								<option> 2 </option>
+								<option> 3 </option>
+								<option> 4 </option>
+								<option> 5 </option>
+								<option> 6 </option>
+								<option> 7 </option>
+								<option> 8 </option>
+								<option> 9 </option>
+								<option> 10 </option>
+							</select>
+						</div>
+
+						<br>
+
+						<!--   <a href="file://localhost/Users/gatty/Desktop/Sales/compra" class="continue">Continuar ››</a>  -->
+						<a href="#" class="continue" id='btn_venta' >Continuar ››</a>
+
+					</form>
+
+	</body>
+<!--	<a href="#" id='btn_1' style="position:absolute;  left:0; top: 0" class="btn_ctr">‹‹ Prueba ››</a> -->
+</html>

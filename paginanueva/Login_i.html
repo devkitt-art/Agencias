@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="../imagenes/Estilos.css" rel="stylesheet" type="text/css" />
+<!--    --> 
+<link rel="stylesheet" href="http://www.odm.com.mx/css/login_odm.css" />
+     
+<title><!$MG_emp> Agencies Access</title>
+<script src="../JS/cambioRollOver.js" type="text/javascript"></script>
+<script src="../JS/validaciones.js" type="text/javascript"></script>
+<script src="../js/idiomaES.js" type="text/javascript"></script>
+<script src="../js/idiomaIN.js" type="text/javascript"></script>
+<script src="../js/idioma.js" type="text/javascript"></script>
+</head>
+
+<script language="javascript">
+function SalirAgencias()
+{
+parent.location.href="<!$MG_urlret>";
+}
+</script>
+<script type="text/javascript">
+		var idioma='<!$MG_idioma>';
+		if(idioma=='')
+		idioma='ES'
+	    setIdioma(idioma);
+		</script>
+
+<body onload="MM_preloadImages('../imagenes/btn_continuar_over.jpg','../imagenes/btn_regresar_over.jpg')">
+
+<FORM name="form" action="<!$MG_url>/netScripts/Request.aspx" method="POST" target='_self' >
+         <INPUT type="hidden" name="APPNAME" value="NAVEGANTE"> 
+         <INPUT type="hidden" name="PRGNAME" value="AccesoEx">
+		 <input type="hidden" name="IDIOMA" value=<!$MG_idioma>>
+         <INPUT type="hidden" name="ARGUMENTS" value="modo,-A,-A,-A,-A,-A,-A,-A,-A,-A,-A,-A,T1,la_password,-A,IDIOMA">
+		 <INPUT type="hidden" name="la_password">
+		 <input type="hidden" name="modo" value="MB">
+	
+	
+<div id="contenedor_principal">
+  <div id="header"> <a href="#" target="_blank"></a>
+</div>
+<div id="contenedor_derecho" style="margin-left:115px;">
+   <div id="contenedor_resultados">
+   <div id="banners_titulos"><span style="text-align:center; color:#FFFFFF;">AGENCIES ACCESS</span></div>
+   <div id="tabla_resultados">
+     <table width="680" border="0" cellspacing="0" cellpadding="0" class="gris_medio">
+       <tr class="azul_1">
+         <td colspan="2" ><img src="../imagenes/separador_200.png" alt="" width="680" height="15" style="margin-top:5px;" /></td>
+         </tr>
+       <tr>
+         <td width="280" align="right" style="color:#FFFFFF;"><p>User:</p></td>
+         <td align="left">
+           <input name="T1" type="text" id="textfield7" size="25" onChange="javascript:this.value=this.value.toUpperCase();"/></td>
+        </tr>
+       <tr>
+         <td align="right" style="color:#FFFFFF;"><p>Password:</p></td>
+         <td align="left"><input name="T2" type="password" id="textfield"  size="26" /></td>
+       </tr>
+	   <tr>
+         <td height="40" colspan="2">&nbsp;</td>
+       </tr>
+     </table>
+   </div>
+  </div>
+  <div id="botones_abajo">
+	<input type="button" onClick="return SalirAgencias();" name="Regresar" id="Regresar" value="Back" />
+	<input type="button" onClick="return EntrarAgencias();" name="Continuar" id="Continuar" value="Next" />
+	</div>
+  </div>
+</div>
+</body>
+</html>

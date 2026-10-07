@@ -1,0 +1,529 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* tabs ***/
+.tab-content {
+	min-height: 292px;
+}
+ select::-ms-expand {
+ 	display: none;
+}
+input[type="radio"]::-ms-expand {
+	display: none;
+}
+.tab-weather {
+	min-height: 80px;
+}
+#myTabUbicacion.nav-tabs > li > a {
+	font-size: 12px;
+	padding: 2px 8px;
+	margin: 0 0 0 4px;
+	background: #fff;
+	border: none;
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	color: #000;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-ms-border-radius: 4px;
+	border-radius: 4px;
+}
+#myTabUbicacion.nav-tabs > li.active {
+	border: none;
+}
+#myTabUbicacion.nav-tabs > li.active > a {
+	background: #1385e5;
+	background: -webkit-linear-gradient(top, #53b2fc, #1385e5);
+	background: -moz-linear-gradient(top, #53b2fc, #1385e5);
+	background: -o-linear-gradient(top, #53b2fc, #1385e5);
+	background: linear-gradient(to bottom, #53b2fc, #1385e5);
+	border-color: #075fa9;
+	color: white;
+	font-weight: bold;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-ms-border-radius: 4px;
+	border-radius: 4px;
+}
+.nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+}
+#myTabUbicacion.nav-tabs > li {
+	float: right
+}
+ul#myTabUbicacion.nav.nav-tabs {
+	margin-top: 0;
+	position: absolute;
+	z-index: 10;
+	right: 0;
+	margin: 6px;
+	border: none;
+	width: 160px;
+	font-size: 14px;
+}
+/*input[type="radio"] + label span{
+ display:inline-block;
+ width:14px;
+ height:14px;
+ margin:-1px 4px 0 0;
+ vertical-align:middle;
+ cursor:pointer;
+
+ -webkit-border-radius: 100%;
+ -moz-border-radius: 100%;
+ border-radius: 100%;
+ }
+
+ input[type="radio"] + label span {
+ background-color:#fff;
+ border:#d7e2eb solid 1px;
+ }
+
+ input[type="radio"]:checked + label span{
+ background:#00529b;
+ }
+
+ input[type="radio"] + label span,
+ input[type="radio"]:checked + label span {
+ -webkit-transition:background-color 0.2s linear;
+ -o-transition:background-color 0.2s linear;
+ -moz-transition:background-color 0.2s linear;
+ transition:background-color 0.2s linear;
+ }*/
+
+form.tickets, form.priceTravel {
+	padding: 3px 10px 10px 20px;
+	margin: 0;
+	font-family: 'Droid Sans', sans-serif;
+	background: #f1f1f1;
+}
+#agencias {
+	position: relative;
+	border: none;
+	background: #003566 url(../images/icon_bus.svg) 12px 10px no-repeat;
+	color: #fff;
+	line-height: 34px;
+	height: 34px;
+	padding: 0px 15px 0px 70px;
+	float: right;
+}
+form.tickets h1, form.priceTravel h1 {
+	font-family: 'Droid Sans', sans-serif;
+	margin: 5px 10px;
+}
+form.tickets h1.user {
+	width: 155px;
+	color: #003464;
+	margin: 10px 0px 10px 10px;
+}
+form.priceTravel {
+	height: 259px;
+	overflow-y: auto;
+}
+ form.priceTravel::-webkit-scrollbar {
+ -webkit-appearance: none;
+ background:;
+}
+ form.priceTravel::-webkit-scrollbar:vertical {
+ width: 20px;
+}
+ form.priceTravel::-webkit-scrollbar:horizontal {
+ height: 18px;
+}
+ form.priceTravel::-webkit-scrollbar-thumb {
+ border:5px solid #f1f1f1;
+ background-color: rgba(0, 0, 0, 0.2);
+}
+ .priceTravel :: -webkit-scrollbar-thumb {
+ border-radius: 4px;
+ border: 1px solid #fff;
+ background-color: #ccc;
+}
+form.priceTravel .rooms h1 {
+	font-size: 12px;
+	width: 50%;
+	float: left;
+	color: #003464;
+	margin: 15px 0px 10px 10px;
+	text-align: center;
+}
+form.priceTravel .rooms h1:nth-child(1) {
+}
+form.priceTravel .rooms ul li:nth-child(1) {
+	width: 35%;
+	height: 34px;
+}
+form.priceTravel .rooms ul li:nth-child(2), form.priceTravel .rooms ul li:nth-child(3), form.priceTravel .rooms ul li:nth-child(4) {
+	width: 16%;
+	height: 35px;
+}
+form.priceTravel .rooms h1:nth-child(2), form.priceTravel .rooms h1:nth-child(3), form.priceTravel .rooms h1:nth-child(4) {
+	width: 20%;
+}
+form.priceTravel .rooms ul {
+	margin: 0;
+	padding: 0;
+}
+form.priceTravel .rooms li {
+	float: left;
+	margin: 0 0 0 10px;
+	text-align: right;
+	line-height: 45px;
+	font-size: 14px;
+}
+form.tickets .travel, form.priceTravel .travel {
+	display: block;
+	float: left;
+	width: 100%;
+	margin: auto;
+	text-align: center;
+}
+#autobus .travel {
+	position: relative;
+	text-align: center;
+	top: 3px;
+}
+form.tickets .travel label, #autobus .travel label {
+	font-size: 13px;
+	line-height: 24px;
+	font-weight: normal;
+	margin: 2px 30px 0 5px;
+}
+form.tickets .travel input[type="radio"], #autobus .travel input[type="radio"] {
+	background: #fff;
+	margin: 5px;
+	display: inline-block;
+	line-height: 40px;/*-webkit-appearance: none;
+	 -moz-appearance: none;
+	 -ms-appearance: none;
+	 -o-appearance: none;
+	 appearance: none;*/
+
+}
+form.tickets .dataPicker, form.priceTravel .dataPicker {
+	position: relative;
+	display: block;
+	float: left;
+	width: 100%;
+}
+form.tickets .traveller, form.priceTravel .rooms {
+	float: left;
+	width: 100%;
+}
+form.tickets .traveller label {
+	float: left;
+	line-height: 30px;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0 10px;
+	width: 60px;
+	text-align: right;
+}
+form.priceTravel .rooms label {
+	float: left;
+	line-height: 30px;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0 10px;
+	width: 30%;
+	text-align: right;
+}
+form.tickets .traveller label:nth-child(odd), form.priceTravel .rooms label:nth-child(odd) {
+	margin-left: 15px;
+}
+form.tickets .traveller select {
+	width: 20% !important;
+}
+form.priceTravel .rooms select {
+	width: 100%;
+}
+form.tickets select, form.tickets input.calendario, form.priceTravel select, form.priceTravel input.calendario, form.priceTravel input.destino, form.tickets input.destino, form.priceTravel input.ubicacion, form.tickets input.ubicacion {
+	display: block;
+	height: 30px;
+	padding: 6px 6px 2px 0;
+	line-height: 16px;
+	font-size: 12px;
+	color: #000;
+	vertical-align: middle;
+	border: 1px solid #d7e2eb;
+	border-radius: 4px;
+	-webkit-appearance: none;
+	width: 45%;
+	float: left;
+	margin: 2px 5px;
+	cursor: text;
+	text-indent: 5px;
+	text-overflow: '';
+	outline: 0;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	
+}
+
+form.priceTravel select.numero{
+	padding: 6px 2px 2px 0;
+}
+
+form.tickets select [type="date"], form.priceTravel select [type="date"] {
+	-webkit-appearance: none;
+}
+form.tickets select.ubicacion, form.priceTravel select.ubicacion, form.tickets input.ubicacion, form.priceTravel input.ubicacion {
+	background: #fff url(../images/icon_location.svg) no-repeat right;
+	text-transform: capitalize;
+	margin-right: 7px;
+}
+form.tickets select.destino, form.priceTravel select.destino, form.tickets input.destino, form.priceTravel input.destino {
+	background: #fff url(../images/icon_travel.svg) no-repeat right;
+}
+form.tickets select::-ms-expand, form.priceTravel select::-ms-expand {
+ display: none;
+}
+form.tickets input.calendario, form.priceTravel input.calendario {
+	background: #fff url(../images/icon_calendar.svg) no-repeat right;
+}
+form.tickets input.calendario:nth-child(2), form.priceTravel input.calendario:nth-child(2) {
+	margin-left: 10px;
+}
+form.tickets select.numero, form.priceTravel select.numero {
+	background: #fff url(../images/icon_number.svg) no-repeat right;
+}
+form.tickets input[type="button"].continuar, form.priceTravel input[type="button"].continuar {
+	font-family: 'Droid Sans', sans-serif;
+	display: block;
+	width: 100%;
+	height: 30px;
+	line-height: 15px;
+	padding: 6px 12px;
+	font-size: 14px;
+	color: #000;
+	vertical-align: middle;
+	border-radius: 4px;
+	width: 45%;
+	float: left;
+	margin: 5px;
+	cursor: pointer;
+	background: #FFF;
+	text-decoration: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+}
+form.tickets .continue {
+	position: relative;
+	border: none;
+	font-size: 14px;
+	border-radius: 4px;
+	background: #003566 url(../images/icon_bus.svg) 12px 10px no-repeat;
+	color: #fff;
+	font-family: 14px;
+	line-height: 34px;
+	height: 34px;
+	padding: 0px 15px 0px 70px;
+	float: right;
+	text-decoration: none;
+	-moz-transition: all 400ms ease 0s;
+	-o-transition: all 400ms ease 0s;
+	-webkit-transition: all 400ms ease 0s;
+	-ms-transition: all 400ms ease 0s;
+	transition: all 400ms ease 0s;
+}
+form.priceTravel .continue {
+	position: relative;
+	border: none;
+	border-radius: 4px;
+	font-size: 14px;
+	background: #003566;
+	color: #fff;
+	line-height: 34px;
+	height: 34px;
+	padding: 0px 15px 0px 15px;
+	margin-top: 10px;
+	float: right;
+	text-decoration: none;
+	-moz-transition: all 400ms ease 0s;
+	-o-transition: all 400ms ease 0s;
+	-webkit-transition: all 400ms ease 0s;
+	-ms-transition: all 400ms ease 0s;
+	transition: all 400ms ease 0s;
+}
+form.tickets .continue:hover, form.priceTravel .continue:hover {
+	background-color: #0072aa;
+	-webkit-animation-name: pulse;
+	-moz-animation-name: pulse;
+	-o-animation-name: pulse;
+	animation-name: pulse;
+	-webkit-animation-duration: 0.6s;
+	-moz-animation-duration: 0.6s;
+	-ms-animation-duration: 0.6s;
+	-o-animation-duration: 0.6s;
+	animation-duration: 0.6s;
+}
+/* datepicker ** */
+
+.datepicker td.active, .datepicker td.active:hover {
+	background: #0072aa !important;
+	background: -moz-linear-gradient(top, #0072aa 0%, #003566 100%) !important;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0072aa), color-stop(100%, #003566)) !important;
+	background: -webkit-linear-gradient(top, #0072aa 0%, #003566 100%) !important;
+	background: -o-linear-gradient(top, #0072aa 0%, #003566 100%) !important;
+	background: -ms-linear-gradient(top, #0072aa 0%, #003566 100%) !important;
+	background: linear-gradient(to bottom, #0072aa 0%, #003566 100%) !important;
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0072aa', endColorstr='#003566', GradientType=0 ) !important;
+}
+.show {
+	visibility: visible;
+}
+.hide {
+	visibility: hidden;
+}
+.edades {
+	text-align:right;
+	font-family: 'Droid Sans', sans-serif;
+	padding: .25em;
+	border-radius: .15em;
+	border: 1px solid #ccc;
+	float: left;
+	margin: 1em 0;
+	width: 100%;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-moz-box-shadow: inset 0px 0px 10px 1px rgba(0,0,0,0.2);
+	-o-box-shadow: inset 0px 0px 10px 1px rgba(0,0,0,0.2);
+	-webkit-box-shadow: inset 0px 0px 10px 1px rgba(0,0,0,0.2);
+	-ms-box-shadow: inset 0px 0px 10px 1px rgba(0,0,0,0.2);
+	box-shadow: inset 0px 0px 10px 1px rgba(0,0,0,0.2);
+}
+.edades h4 {
+	margin: 5px 4px;
+	color: #00529b;
+}
+.edades h3 {
+	font-size: 12px;
+	margin: 5px 4px;
+}
+.edades table {
+	float: right;
+	padding: 0px 2px;
+	margin: 3px;
+	width: 14.8%;
+}
+.edades table h2 {
+	font-size: 12px;
+}
+.edades table select {
+	width: 100% !important;
+	border: 1px solid #d7e2eb !important;
+	padding: 6px 4px;
+	margin: 0px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	background: #fff;
+	border: none;
+	outline: none;
+	display: inline-block;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	cursor: pointer;
+	background: #fff url(../images/icon_select.svg) no-repeat right;
+}
+.edades table td {
+	text-align: center;
+}
+/*.edades table label:before {
+	content: '';
+	right: 14px;
+	top: 6px;
+	width: 20px;
+	height: 15px;
+	background: #fff;
+	position: absolute;
+	pointer-events: none;
+	display: block;
+}
+.edades table label:after {
+	content: '<>';
+	font: 11px "Consolas", monospace;
+	color: #aaa;
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
+	right: 14px;
+	top: 3px;
+	padding: 0 0 2px;
+	border-bottom: 1px solid #ddd;
+	position: absolute;
+	pointer-events: none;
+}*/
+
+
+/*#tickets input[type="radio"] {
+    display:none;
+}
+
+#tickets input[type="radio"] + label {
+    color:#333;
+	font-family: 'Droid Sans', sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	text-align:center;
+	cursor:pointer;
+}
+
+#tickets input[type="radio"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    background:url(../images/check_radio_sheet.png) -38px top no-repeat;
+    cursor:pointer;
+}
+
+#tickets input[type="radio"]:checked + label span {
+    background: url(../images/check_radio_sheet.png) -57px top no-repeat;
+}*/
+
+
+#tickets input[type="radio"], #autobus input[type="radio"],.tickets input[type="radio"] {
+	position: relative;
+background: #fff;
+border-radius: 10px;
+cursor: pointer;
+display: inline-block;
+height: 18px;
+width: 18px;
+-webkit-appearance: none;
+border: #ddd solid 1px;
+
+}
+#tickets input[type="radio"]:after, #autobus input[type="radio"]:after, .tickets input[type="radio"]:after {
+	position: relative;
+	background: #ddd;
+	border-radius: 25px;
+	content: '';
+	display: block;
+	height: 8px;
+	width: 8px;
+	left: 4px;
+	top: 4px;
+}
+#tickets input[type="radio"]:checked:after, #autobus input[type="radio"]:checked:after, .tickets input[type="radio"]:checked:after {
+	background: #00489f;
+}
+#tickets input[type="radio"]:focus, #autobus input[type="radio"]:focus, .tickets input[type="radio"]:focus, {
+	outline: 0;
+	-moz-outline-radius: 12px !important;
+	-moz-outline-offset: 0px !important;
+}

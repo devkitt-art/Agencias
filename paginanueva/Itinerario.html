@@ -1,0 +1,109 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<title>Itinerario </title>
+<style type="text/css">
+body {
+	background-color:#FFFFFF ;
+	font: 12px Arial, Helvetica, sans-serif;
+	margin: 0;
+	}
+	
+#contenedor {
+	background: url("../imagenes/backInfo.jpg") repeat-x scroll 0 0 #EEEEEE;
+	margin: 0 auto;
+	width: 600px;
+	
+}
+table td {
+	padding: 7px;
+}
+table tr.head {
+	color: #FFFFFF;
+	font-weight:bold;
+} 
+.itinerario {
+	border: solid 1px #CCC;}
+
+</style>
+
+	<script src="../imagenes/genera.js" type="text/javascript"></script> 
+	<script src="../js/validaciones.js" type="text/javascript"></script>
+	<script src="../js/idiomaES.js" type="text/javascript"></script>
+	<script src="../js/idiomaIN.js" type="text/javascript"></script>
+	<script src="../js/idioma.js" type="text/javascript"></script>
+	
+</head>
+
+<body >
+
+<div id="contenedor">
+<table class='itinerario' width='600' border='0' cellspacing='0' cellpadding='0'>
+  <tr>
+    <td align='center' style='padding:7px 0;'></td>
+  </tr>
+  <tr>
+    <td valign='top'>
+	<table width='580' border='0' align='center' cellpadding='0' cellspacing='0' style="font: 12px Arial,Helvetica,sans-serif;">
+	  
+<script language="javascript">
+    var A_Estancia = new Array(<!$MG_Estancia>)
+    var A_FechaSalIni = new Array(<!$MG_FechaSal>)
+    var A_HoraSalida = new Array(<!$MG_HoraSalida>)
+    var A_Traslado = new Array(<!$MG_Traslado>)
+    var A_FechaLlegada = new Array(<!$MG_FechaLlegada>)
+    var A_HoraLlegada = new Array(<!$MG_HoraLlegada>)
+    var V_TotalTraslado = <!$MG_TotalTraslado>
+    var A_Oficina = new Array(<!$MG_Oficina>)
+	var A_Empresa = new Array(<!$MG_Empresas>)
+	var idioma='<!$MG_idioma>';
+	
+	
+	if(idioma=='' || idioma!='IN')
+		idioma='ES';
+		
+	setIdioma(idioma);
+
+	
+	var i = 0
+	var cadTabla = "";
+	cadTabla+=	"<tr class='head'>"
+	cadTabla+=	"<td width='231' bgcolor='#094992' align='center'>"+txt.Tramo+"</td>"
+	cadTabla+=	"<td width='76' bgcolor='#094992' align='center'>"+txt.fechaSalida+"</td>"
+	cadTabla+=	"<td width='58' bgcolor='#094992' align='center'>"+txt.horaSalida+"</td>"
+	cadTabla+=	"<td width='76' bgcolor='#094992' align='center'>"+txt.fechaLlegada+"</td>"
+	cadTabla+=	"<td width='65' bgcolor='#094992' align='center'>"+txt.horaLlegada+"</td>"
+	//if(A_Empresa[0]!='')
+	if (typeof A_Empresa[0] !== 'undefined')
+	cadTabla+=	"<td width='58' bgcolor='#094992' align='center'>"+txt.Empresa+"</td>"
+	cadTabla+=  "</tr>"
+	
+  	do 	{
+		cadTabla += "<tr><td align='left'>"+A_Oficina[i]+"-"+A_Oficina[i+1]+"</td>"
+        cadTabla += "<td align='center' >"+A_FechaSalIni[i]+"</td>"
+        cadTabla += "<td align='center' >"+cambiaFormatoHora(A_HoraSalida[i])+"</td>"
+        cadTabla += "<td align='center' >"+A_FechaLlegada[i+1]+"</td>"
+        cadTabla += "<td align='center' >"+cambiaFormatoHora(A_HoraLlegada[i+1])+"</td>"
+		//if(A_Empresa[0]!='')
+		if (typeof A_Empresa[0] !== 'undefined')
+		cadTabla+=	"<td align='center' >"+A_Empresa[i+1]+"</td>"
+		cadTabla+="</tr>"
+		i++
+	} while (i<A_HoraSalida.length-1)
+	
+	document.write(cadTabla)
+</script>
+	</table>
+ </td>
+ </tr>
+</table>
+</div>
+<script language="javascript">
+	var leyenda='<!$MG_Leyenda>';
+	cadTabla='<p align="center">'+leyenda+'</p>';
+	document.write(cadTabla);
+</script>
+</body>
+</html>

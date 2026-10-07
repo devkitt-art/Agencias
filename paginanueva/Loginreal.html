@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="../imagenes/Estilos.css" rel="stylesheet" type="text/css" />
+<title><!$MG_emp> Cuadro de Venta</title>
+<script src="../JS/cambioRollOver.js" type="text/javascript"></script>
+<script src="../JS/validaciones.js" type="text/javascript"></script>
+</head>
+
+<script language="javascript">
+function cambiar(forma)
+{
+	if(forma=='H'){
+		document.getElementById('textfield7').name='T3'
+		document.getElementById('textfield').name='T4'
+		document.getElementById('cuadroVentaVertical').innerHTML = "Nulo";}
+	else{ 
+		document.getElementById('textfield7_1').name='T3'
+		document.getElementById('textfield_1').name='T4'
+		document.getElementById('cuadroVentaAgencias').innerHTML = "Nulo";}
+}//!$MG_modo>
+function SalirAgencias()
+{
+parent.location.href="<!$MG_urlret>";
+}
+</script>
+
+<body onload="cambiar('<!$MG_modo>');MM_preloadImages('../imagenes/btn_cv_agencias_over.png','../imagenes/btn_cv_paquetes_over.png','../imagenes/btn_cv_continuar_over.png','../imagenes/btn_cv_regresar_over.png')">
+
+<FORM name="form" action="<!$MG_url>/netScripts/Request.aspx" method="POST" target='_blank' style="position: absolute; left: 0; top: 1; width:244; height:293">
+         <INPUT type="hidden" name="APPNAME" value="NAVEGANTE"> 
+         <INPUT type="hidden" name="PRGNAME" value="AccesoEx">
+         <INPUT type="hidden" name="ARGUMENTS" value="modo,-A,-A,-A,-A,-A,-A,-A,-A,-A,-A,-A,T1,la_password">
+		 <INPUT type="hidden" name="la_password">
+		 <input type="hidden" name="modo" value="MB">
+		 		 
+
+<div id="cuadroVentaVertical" style="display:<!$MG_vertical>;">
+<table width="300" border="0" cellspacing="0" cellpadding="0" class="cuadro">
+<TR class="imagent"><td><img src="../imagenes/accesoagencias_l.png" width="300" height="33"/></td></TR>
+<tr class="imagent"><td>&nbsp;</td></tr>
+<tr class="imagent"><td>&nbsp;</td></tr>
+  <tr class="imagent1">
+    <td colspan="2" align="center" class="nf"><table width="300" border="0" cellspacing="0" cellpadding="0">
+     <tr>
+        <td  width="268" align="right" valign="bottom" class="nf">
+          <a href="#"><img src="../imagenes/btn_cv_agencias.png" width="128" height="35" border="0" id="Image1" onmouseover="MM_swapImage('Image1','','../imagenes/btn_cv_agencias_over.png',1)" onmouseout="MM_swapImgRestore()" /></a><a href="#"><img src="../imagenes/btn_cv_paquetes.png" width="123" height="35" border="0" id="Image2" onmouseover="MM_swapImage('Image2','','../imagenes/btn_cv_paquetes_over.png',1)" onmouseout="MM_swapImgRestore()" /></a></td>
+        </tr>
+        <tr><td>&nbsp;</td></tr>
+      <tr>
+        <td align="center" valign="bottom"><img src="../imagenes/titulo_cv_vbpagencias.png" width="166" height="44" alt="Venta de Boletos" /></td>
+        </tr>
+      <tr>
+        <td align="center" valign="bottom">&nbsp;</td>
+        </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><table class="primera" width="240" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="113"><label for="textfield2">Usuario</label><label for="textfield7"></label></td>
+        <td width="99"><input name="T1" type="text" id="textfield7" size="20" onChange="javascript:this.value=this.value.toUpperCase();"/></td>
+        </tr>
+      <tr>
+        <td><label for="textfield8">Contraseña</label></td>
+        <td><input name="T2" type="password" id="textfield" size="20" /></td>
+        </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">&nbsp;</td>
+  </tr>
+   <tr>
+    <td colspan="2" align="center">&nbsp;</td>
+  </tr>
+     <tr>
+    <td colspan="2" align="center">&nbsp;</td>
+  </tr>
+   <tr class="imagent1">
+    <td colspan="2" align="center">&nbsp;</td>
+  </tr>
+     <tr class="imagent1">
+    <td colspan="2" align="center">&nbsp;</td>
+  </tr>
+  <tr class="imagent1">
+  <td width="200"><a onClick="return SalirAgencias();"><img src="../imagenes/btn_cv_regresar.png" alt="Regresar" width="101" height="33" border="0" id="Image4" onmouseover="MM_swapImage('Image4','','../imagenes/btn_cv_regresar_over.png',1)" onmouseout="MM_swapImgRestore()" /></a></td>
+  <td align="right"><a href="#" onClick="return EntrarAgencias();"><img src="../imagenes/btn_cv_continuar.png" alt="Continuar" width="101" height="33" border="0" id="Image3" onmouseover="MM_swapImage('Image3','','../imagenes/btn_cv_continuar_over.png',1)" onmouseout="MM_swapImgRestore()" /></a></td>
+  </tr>
+  <tr class="imagent">
+  <td width="200"><a onClick="return SalirAgencias();"><img src="../imagenes/btn_regresar.jpg" alt="Regresar" width="101" height="33" border="0" id="Image5" onmouseover="MM_swapImage('Image5','','../imagenes/btn_regresar_over.jpg',1)" onmouseout="MM_swapImgRestore()" /></a></td>
+  <td align="right"><a href="#" onClick="return EntrarAgencias();"><img src="../imagenes/btn_continuar.jpg" alt="Continuar" width="101" height="33" border="0" id="Image6" onmouseover="MM_swapImage('Image6','','../imagenes/btn_continuar_over.jpg',1)" onmouseout="MM_swapImgRestore()" /></a></td>
+  </tr>
+
+</table>
+</div>
+
+<div id="cuadroVentaAgencias" style="display:<!$MG_horizontal>;">
+<div id="cuadroVentaInterior">
+<table width="470" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><table width="470" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td  width="174" valign="top" class="padTit"><img src="../imagenes/titulo_cv_vbpagencias.png" width="166" height="44" alt="Venta de Boletos" /></td>
+       
+        <td width="296" align="right" valign="top"><a href="#"><img src="../imagenes/btn_cv_agencias.png" width="128" height="35" border="0" id="Image1" onmouseover="MM_swapImage('Image1','','../imagenes/btn_cv_agencias_over.png',1)" onmouseout="MM_swapImgRestore()" /></a><a href="#"><img src="../imagenes/btn_cv_paquetes.png" width="123" height="35" border="0" id="Image2" onmouseover="MM_swapImage('Image2','','../imagenes/btn_cv_paquetes_over.png',1)" onmouseout="MM_swapImgRestore()" /></a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td class="combo"><table class="primera" width="271" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="107" valign="middle">Usuario
+          <label for="textfield6"></label></td>
+        <td width="356"><input name="T1" type="text" id="textfield7_1" size="20" onChange="javascript:this.value=this.value.toUpperCase();"/></td>
+       
+      </tr>
+      <tr>
+        <td valign="middle">Contraseña</td>
+        <td><input name="T2" type="password" id="textfield_1" size="20" /></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><table class="segunda" width="470" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><a onClick="return SalirAgencias();"><img src="../imagenes/btn_cv_regresar.png" alt="Regresar" width="101" height="33" border="0" id="Image4" onmouseover="MM_swapImage('Image4','','../imagenes/btn_cv_regresar_over.png',1)" onmouseout="MM_swapImgRestore()" /></a></td>
+        <td align="right" wi><a href="#" onClick="return EntrarAgencias();"><img src="../imagenes/btn_cv_continuar.png" alt="Continuar" width="101" height="33" border="0" id="Image3" onmouseover="MM_swapImage('Image3','','../imagenes/btn_cv_continuar_over.png',1)" onmouseout="MM_swapImgRestore()" /></a></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</div>
+</div>
+
+</body>
+</html>

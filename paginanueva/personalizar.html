@@ -1,0 +1,27 @@
+({	"CostoTotal" : <!$MG_CostoTotal> ,
+	"Adul": "<!$MG_Adulto>",
+	"Nin": "<!$MG_Nino>",
+	"Ins": "<!$MG_Insen>", 
+	"Est": "<!$MG_Estudiante>", 
+	"Mae": "<!$MG_Maestro>",
+	"MoOpe": "<!$MG_MoOpe>",
+	"QDescuentoIda" : "<!$MG_PromoidaC>",
+	"QDescuentoReg" : "<!$MG_PromoRegC>",
+	"NDescuentosIda" : <!$MG_NdesIda>,
+	"NDescuentosReg" : <!$MG_NdesReg>
+		
+		,		
+		
+		"PasajerosIda":[
+		<!$MGREPEAT>
+		{ "Leyenda" : "<!$MG_Leyenda>", "Costo": <!$MG_Costo>, "CostoOri": <!$MG_CostoOri>}<!$MG_Coma>
+		<!$MGENDREPEAT>
+	] 
+	<!$MGIF_Redondo>  ,
+	"PasajerosRegreso":[
+		<!$MGREPEAT>
+		{ "Leyenda" : "<!$MG_LeyendaRegreso>", "Costo": <!$MG_CostoRegreso>, "CostoOri": <!$MG_CostoOriReg>}<!$MG_ComaRegreso>
+		<!$MGENDREPEAT>
+	]
+	<!$MGENDIF>
+})

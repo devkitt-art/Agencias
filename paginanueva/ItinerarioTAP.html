@@ -1,0 +1,77 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<title>Itinerario </title>
+<style type="text/css">
+body {
+	background-color:#FFFFFF ;
+	font: 12px Arial, Helvetica, sans-serif;
+	margin: 0;
+	}
+	
+#contenedor {
+	background: url("../imagenes/backInfo.jpg") repeat-x scroll 0 0 #EEEEEE;
+	margin: 0 auto;
+	width: 520px;
+	
+}
+table td {
+	padding: 7px;
+}
+table tr.head {
+	color: #FFFFFF;
+	font-weight:bold;
+} 
+.itinerario {
+	border: solid 1px #CCC;}
+
+</style>
+</head>
+
+<body >
+
+<div id="contenedor">
+<table class='itinerario' width='520' border='0' cellspacing='0' cellpadding='0'>
+  <tr>
+    <td align='center' style='padding:7px 0;'><img src='../imagenes/titulo_itinerario.jpg' width='506' height='67' alt='Itinerario' /></td>
+  </tr>
+  <tr>
+    <td valign='top'>
+	<table width='506' border='0' align='center' cellpadding='0' cellspacing='0' style="font: 12px Arial,Helvetica,sans-serif;">
+	  <tr class='head'>
+		<td width='231' bgcolor="#12459e" align='center'>Tramo</td>
+		<td width='76' bgcolor="#114692" align='center'>Fecha salida</td>
+		<td width='58' bgcolor="#114692" align='center'>Hora Salida</td>
+		<td width='76' bgcolor="#114692" align='center'>Fecha llegada</td>
+		<td width='65' bgcolor="#114692" align='center'>Hora llegada</td>
+	  </tr>
+<script language="javascript">
+    var A_Estancia = new Array(<!$MG_Estancia>)
+    var A_FechaSalIni = new Array(<!$MG_FechaSal>)
+    var A_HoraSalida = new Array(<!$MG_HoraSalida>)
+    var A_Traslado = new Array(<!$MG_Traslado>)
+    var A_FechaLlegada = new Array(<!$MG_FechaLlegada>)
+    var A_HoraLlegada = new Array(<!$MG_HoraLlegada>)
+    var V_TotalTraslado = <!$MG_TotalTraslado>
+    var A_Oficina = new Array(<!$MG_Oficina>)
+	var i = 0
+	var cadTabla = "";
+  	do 	{
+		cadTabla += "<tr><td align='left'>"+A_Oficina[i]+"-"+A_Oficina[i+1]+"</td>"
+        cadTabla += "<td align='center' >"+A_FechaSalIni[i]+"</td>"
+        cadTabla += "<td align='center' >"+A_HoraSalida[i]+"</td>"
+        cadTabla += "<td align='center' >"+A_FechaLlegada[i+1]+"</td>"
+        cadTabla += "<td align='center' >"+A_HoraLlegada[i+1]+"</td></tr>"
+		i++
+	} while (i<A_HoraSalida.length-1)
+	document.write(cadTabla)
+</script>
+	</table>
+ </td>
+ </tr>
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!$MGIF_Banco> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type:text/xml; charset=ISO-8859-1" /></head>
+<body >
+
+<form style="display: hidden" action="" method="POST" id="venta" target="_parent">
+  <input type="hidden" id="data" name="data" value=""/>
+</form>
+
+
+<script >
+<!$MGENDIF>
+
+var dato ={
+		Nit:"<!$MG_Nit>",
+		Operacion:"<!$MG_Operacion>",
+		Tarjeta:"<!$MG_Tajeta>",
+		Autorizacion:"<!$MG_Autorizacion>",
+		Voucher:"<!$MG_Vaucher>",
+		FechaSalida:"<!$MG_FechaSalida>",
+		HoraSalida:"<!$MG_HoraSalida>",
+		ClaseServicio:"<!$MG_claseservicio>",
+		Origen:"<!$MG_Origen>",
+		Destino:"<!$MG_Destino>",
+		Total:"<!$MG_Total>",
+		PromoIda:"<!$MG_visiblepromo>",
+		PromoReg:"<!$MG_visiblepromoReg>",
+		Abierto:"<!$MG_BoletoAbierto>",
+		LECOTR:"<!$MG_LECOTR>",
+		LECOPA:"<!$MG_LECOPA>",
+		LECOPI:"<!$MG_LECOPI>",
+		Todito:"<!$MG_Todito>",
+		Idioma:"<!$MG_Idioma>",
+		ViajeIda:[
+			<!$MGREPEAT>
+			{Operacion:"<!$MG_oper>",TipoPasajero:"<!$MG_tipopasajero>",Asiento:"<!$MG_asiento>",NombrePasajero:"<!$MG_nombrePasajero>",Monto:"<!$MG_monto>",Promo:"<!$MG_promo>",Empresa:"<!$MG_empresa>",OrigenDestino:"<!$MG_origenDestino>",IntIva:"<!$MG_intiva>",horacorr:"<!$MG_horacorr>",fechacorr:"<!$MG_fechacorr>"}<!$MG_coma>
+			<!$MGENDREPEAT>	
+		]
+		<!$MGIF_Redondo> 
+		,
+		FechaSalidaReg:"<!$MG_FechaSalidaBRegreso>",
+		HoraSalidaR:"<!$MG_HoraSalidaBRegreso>",
+		ClaseServicioR:"<!$MG_claseservreg>",
+		ViajeRegreso:[
+			<!$MGREPEAT>
+			{Operacion:"<!$MG_operaReg>",TipoPasajero:"<!$MG_tiposPasajeroReg>",Asiento:"<!$MG_asientoReg>",NombrePasajero:"<!$MG_nombreReg>",Monto:"<!$MG_montoReg>",Promo:"<!$MG_promoReg>",Empresa:"<!$MG_empresaReg>",OrigenDestino:"<!$MG_origenDestinoReg>",IntIvaRe:"<!$MG_intivare>",horacorr:"<!$MG_horacorrReg>",fechacorr:"<!$MG_fechacorrReg>"}<!$MG_comaReg>
+			<!$MGENDREPEAT>	
+		]
+		<!$MGENDIF>
+		
+		}	
+	<!$MGIF_Banco>
+	
+		var esPhp=0;
+	try{
+   parent.RespuestaGuardado(dato);
+   }
+   catch(err){
+   esPhp=1;
+   }
+   if(esPhp==1)
+   {
+			var data = JSON.stringify(dato);
+			
+			data=data.replace('(','[');
+			data=data.replace(')',']');	
+			data=data.replace(' ','');
+			//data=data.substr(9,data.length);
+			data='['+data+']';
+			
+			data = data.replace(/</g, "");
+			data = data.replace(/>/g, "");
+			
+			oper=dato.Operacion;
+			
+			
+			if(oper=="0")
+			{
+				alert('Error al realizar el cobro, el pago no fue aprobado');
+			}
+			else
+			{
+			
+				var idioma=dato.Idioma;
+				//var url="http://10.4.180.133:5080";
+				//var url="http://webq.omnibusexpress.com";
+				var url="https://venta.omnibusexpress.com:30443";
+				//window.parent.location.href= url+"/odm/PASO1/PASO2/PASO3/envioInfoOper.php?data="+data;
+				
+				if(idioma=="I")
+				{
+					document.getElementById("venta").action = url+'/OExpress/Filtros/Paso1/Paso2/Paso3/Pago/PasoFinal/ConfirmacionIN';
+				}
+				else
+				{
+				document.getElementById("venta").action = url+'/OExpress/Filtros/Paso1/Paso2/Paso3/Pago/PasoFinal/ConfirmacionES';
+				}
+				document.getElementById("data").value = data;
+				document.getElementById("venta").submit();
+			}
+	}
+	
+	
+</script>
+</body>
+</html>
+<!$MGENDIF>

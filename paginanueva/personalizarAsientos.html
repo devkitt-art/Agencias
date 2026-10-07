@@ -1,0 +1,41 @@
+({	"CostoTotal" : <!$MG_CostoTotal> ,
+	"TotalPrepago":<!$MG_TotalPrepago>,
+	"AplicaPrepago":<!$MG_AplicaPrepago>,
+	"Adul": "<!$MG_Adulto>",
+	"Nin": "<!$MG_Nino>",
+	"Ins": "<!$MG_Insen>", 
+	"Est": "<!$MG_Estudiante>", 
+	"Mae": "<!$MG_Maestro>",
+	"MoOpe": "<!$MG_MoOpe>",
+	"NACFEN":<!$MG_nacfen>,
+	"Documentos":"<!$MG_Documentos>",
+	"manifiesto":<!$MG_manifiesto>,
+	"manifiestoC":<!$MG_manifiestoC>,
+	"manifiestoVS":<!$MG_manifiestoVS>,
+	"QDescuentoIda" : "<!$MG_PromoidaC>",
+	"QDescuentoReg" : "<!$MG_PromoRegC>",
+	"NDescuentosIda" : <!$MG_NdesIda>,
+	"NDescuentosReg" : <!$MG_NdesReg>,		
+		"PasajerosIda":[
+		<!$MGREPEAT>
+		{ "Leyenda" : "<!$MG_Leyenda>", "Costo": <!$MG_Costo>, "CostoOri": <!$MG_CostoOri>,"TipoPasajero": "<!$MG_TipoPasajero>"}<!$MG_Coma><!$MGENDREPEAT>] 
+	<!$MGIF_Redondo>,
+	"PasajerosRegreso":[
+		<!$MGREPEAT>
+		{ "Leyenda" : "<!$MG_LeyendaRegreso>", "Costo": <!$MG_CostoRegreso>, "CostoOri": <!$MG_CostoOriReg>, "TipoPasajeroR": "<!$MG_TipoPasajeroR>"}<!$MG_ComaRegreso>
+		<!$MGENDREPEAT>
+	]
+	<!$MGENDIF>,
+		"Filas":<!$MG_Filas>,"NoCapturaUltFila":<!$MG_Ultfila>,"Filas2do":<!$MG_Filas2do>,
+		"Asientos":
+		[
+		<!$MGREPEAT>
+			{ "Asientos":"<!$MG_Asientos>",
+			"Estados":"<!$MG_Estados>",
+			"Imagenes":"<!$MG_Imagenes>",
+			"piso" : "<!$MG_piso>"
+			}
+		<!$MG_coma>
+		<!$MGENDREPEAT>
+]
+})
